@@ -30,11 +30,25 @@ class GameTheory(Game, Theory):
         pass
     # 프로퍼티를 이용해서 self.entire_pie를 관리할 예정
 
+    # 아마 이렇게 될지도? (오버라이딩이 없다면)
+    @property
+    def whole_resource(self):
+        return self._entire_pie
+    
+    @whole_resource.setter
+    def more_input(self, input_value):
+        if input_value < 0:
+            raise ValueError("This value will not negative")
+        self._entire_pie = self._entire_pie + input_value
+        return self._entire_pie
 
 if __name__ == "__main__":
     pie = whole_resource(50)
     print(pie.resource)
     pie.more_input = 30
     print(pie.resource)
-
+    print()
     game = GameTheory("test1", "test2", 30, "von")
+    print(game.whole_resource) # -> GameTheory의 인스턴스 -> entire_pie(property) -> 
+    game._entire_pie.more_input = 40 
+    print(game.whole_resource)

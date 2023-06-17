@@ -29,7 +29,7 @@ class whole_resource:
     def more_input(self, input_more_value):
         if input_more_value < 0:
             raise ValueError("cannot input negative")
-        self._resource = self._resource + input_more_value
+        self._resource = self.resource + input_more_value
         return self._resource
 
 if __name__ == "__main__":
