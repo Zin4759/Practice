@@ -49,6 +49,6 @@ if __name__ == "__main__":
     print(pie.resource)
     print()
     game = GameTheory("test1", "test2", 30, "von")
-    print(game.whole_resource) # -> GameTheory의 인스턴스 -> entire_pie(property) -> 
+    print(game.whole_resource) # -> GameTheory의 인스턴스 -> entire_pie(property)
     game._entire_pie.more_input = 40 
     print(game.whole_resource)
