@@ -1,0 +1,1 @@
+used editor = intellij community edition
