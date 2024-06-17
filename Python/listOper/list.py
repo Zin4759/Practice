@@ -30,3 +30,4 @@ if List1[2] > List1[3]:
     print("List1[3] is " + str(List1[3]))
 
 print(str(List1)+" is sorted!")
+# [1, 2, 3, 4, 5]
